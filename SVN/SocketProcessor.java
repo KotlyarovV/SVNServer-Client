@@ -33,14 +33,12 @@ public class SocketProcessor implements Runnable {
             writeResponse(answer);
 
         } catch (Throwable t) {
-                /*do nothing*/
                 System.out.println(t.getMessage());
         } finally {
             try {
                 s.close();
                 System.out.println("closed");
             } catch (Throwable t) {
-                    /*do nothing*/
             }
         }
         System.err.println("Client processing finished");
